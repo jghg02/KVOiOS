@@ -26,4 +26,30 @@ En __options__ establecemos unas indicacione de tipo __KVO__ de como queremos qu
 
 - Implementación de _CallBacks_
 
+Luego de implementar el __addObserver__ es necesario implementar el __CallBack__ del observador, de la siguiente manera: 
+	
+	- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
+	{
+    	NSString *newValue = [change objectForKey:NSKeyValueChangeNewKey];
+    
+    	NSLog(@"Valor %@ --> %@", keyPath, newValue);
+	}
+
+En el parametro _change_ es un __NSDictionary__ el cual contiene las claves y los valores asociados con la información asociada. 
+
+| Valor  | Descripción  |
+|---|---|
+| NSKeyValueChangeKindKey  | NSNumber que especifica el tipo de cambio  |
+| NSKeyValueChangeNewKey  | Nuevo valor  |
+| NSKeyValueChangeOldKey  | Antiaguo Valor   |
+| NSKeyValueChangeIndexesKey  | Si NSKeyValueChangeKindKey es uno de estos: NSKeyValueChangeInsertion, NSKeyValueChangeRemoval o NSKeyValueChangeReplacement, este tendrá los indices de los valores cambiados.  |
+| NSKeyValueChangeNotificationIsPriorKey  | Se utiliza junto con NSKeyValueChangeOptionPrior para indicar la notificación previa.  |
+
+
+- Eliminar el Observador. 
+
+Por ultimo es necesario remover el observador ya que se puede producir un error en la App y cerrarse. 
+
+	[self.car removeObserver:self forKeyPath:@"model"];
+
 
