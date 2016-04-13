@@ -22,12 +22,13 @@
     
     Person *p1 = [[Person alloc] init];
     p1.name = @"Josue Hernandez";
-    p1.rut = @"247084045";
+    p1.rut = @"11111111";
     
     PersonObserver *pObserver = [[PersonObserver alloc] initWithPerson:p1];
+    NSLog(@"Observer Person %@",pObserver.description);
     
     p1.name = @"Legna Castro";
-    p1.rut = @"249531049";
+    p1.rut = @"22222222";
     
     
     return YES;
