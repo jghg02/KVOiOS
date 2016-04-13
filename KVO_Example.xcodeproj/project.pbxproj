@@ -13,6 +13,8 @@
 		D6433E121CBD34DB00754CAC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6433E101CBD34DB00754CAC /* Main.storyboard */; };
 		D6433E141CBD34DB00754CAC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6433E131CBD34DB00754CAC /* Assets.xcassets */; };
 		D6433E171CBD34DB00754CAC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6433E151CBD34DB00754CAC /* LaunchScreen.storyboard */; };
+		D6B9986A1CBEC3FE004E08F5 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B998691CBEC3FE004E08F5 /* Person.m */; };
+		D6B9986D1CBEC4D5004E08F5 /* PersonObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B9986C1CBEC4D5004E08F5 /* PersonObserver.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,10 @@
 		D6433E131CBD34DB00754CAC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D6433E161CBD34DB00754CAC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D6433E181CBD34DB00754CAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D6B998681CBEC3FE004E08F5 /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		D6B998691CBEC3FE004E08F5 /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+		D6B9986B1CBEC4D5004E08F5 /* PersonObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonObserver.h; sourceTree = "<group>"; };
+		D6B9986C1CBEC4D5004E08F5 /* PersonObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonObserver.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +73,10 @@
 				D6433E151CBD34DB00754CAC /* LaunchScreen.storyboard */,
 				D6433E181CBD34DB00754CAC /* Info.plist */,
 				D6433E071CBD34DB00754CAC /* Supporting Files */,
+				D6B998681CBEC3FE004E08F5 /* Person.h */,
+				D6B998691CBEC3FE004E08F5 /* Person.m */,
+				D6B9986B1CBEC4D5004E08F5 /* PersonObserver.h */,
+				D6B9986C1CBEC4D5004E08F5 /* PersonObserver.m */,
 			);
 			path = KVO_Example;
 			sourceTree = "<group>";
@@ -150,7 +160,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				D6433E0F1CBD34DB00754CAC /* ViewController.m in Sources */,
+				D6B9986D1CBEC4D5004E08F5 /* PersonObserver.m in Sources */,
 				D6433E0C1CBD34DB00754CAC /* AppDelegate.m in Sources */,
+				D6B9986A1CBEC3FE004E08F5 /* Person.m in Sources */,
 				D6433E091CBD34DB00754CAC /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -300,6 +312,7 @@
 				D6433E1D1CBD34DB00754CAC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

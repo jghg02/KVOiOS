@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "Person.h"
+#import "PersonObserver.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +19,17 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    Person *p1 = [[Person alloc] init];
+    p1.name = @"Josue Hernandez";
+    p1.rut = @"247084045";
+    
+    PersonObserver *pObserver = [[PersonObserver alloc] initWithPerson:p1];
+    
+    p1.name = @"Legna Castro";
+    p1.rut = @"249531049";
+    
+    
     return YES;
 }
 
